@@ -17,11 +17,23 @@ When the user submits the form, and depending on the current date, the app will 
 ////
 
 Homepage    | 
-            | - Ask user for name 
-            | - Ask user for (dd) of dob
-            |  - Ask user for (mm) of dob 
-            |  - Submit button 
+            | - Ask user for name /
+            | - Ask user for (dd) of dob/
+            |  - Ask user for (mm) of dob /
+            |  - Submit button /
+              - Post form to /output 
+              
 
 Outcome     | 
             |  - If birthday : wish happy birthday <<<
             |  - Else: Tell them how long til next birthday <<<<
+
+DOB class  | - Take homepage form information and output on outcome page 
+           | - Has to know the Time.new - use dependancy injection 
+           | - Birthday def //
+                          - Takes DOB input // 
+                          - Compares to current date  
+                          - if same 
+                              Wish happy birthday 
+                          - else 
+                              How long till 
