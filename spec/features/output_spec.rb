@@ -1,6 +1,9 @@
 require 'spec_helper'
 
+
+
 feature 'Output page ' do
+ 
   scenario "display user name" do
     visit("/")
     fill_in("name", with: "Jo")
@@ -20,5 +23,13 @@ feature 'Output page ' do
     fill_in("mm", with: "02")
     click_button("Submit")
     expect(page).to have_content("02")
+  end
+
+  scenario "display user mm dob" do
+    visit("/")
+    fill_in("dd", with: "1")
+    fill_in("mm", with: "5")
+    click_button("Submit")
+    expect(page).to have_content("Happy Birthday")
   end
 end     

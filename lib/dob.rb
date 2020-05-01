@@ -6,16 +6,15 @@ class Dob
   end 
 
   def birthday_message(dd, mm)
+    day = dd.to_i
+    month = mm.to_i
+    current_day = @time.day
+    current_month = @time.month
 
-
-    day = dd
-    month = mm 
-
-    if @time.month == month && @time.day == day
+    if current_day === day && current_month === month
       return "Happy Birthday"
-    else 
+    else
       return "Hello"
     end 
-
   end 
 end 

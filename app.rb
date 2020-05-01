@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require_relative './lib/dob'
 
 class Birthday < Sinatra::Base
   get '/' do
@@ -12,6 +13,7 @@ class Birthday < Sinatra::Base
     @name = params[:name]
     @dd = params[:dd]
     @mm = params[:mm]
+    @birthday = Dob.new.birthday_message(@dd, @mm)
     erb(:outcome)
   end 
 

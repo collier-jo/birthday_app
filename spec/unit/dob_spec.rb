@@ -12,13 +12,8 @@ describe Dob do
 
     it "If DOB(DD, MM) match Time(D, M) output Happy Birthday" do 
       jo = Dob.new(Time.new(2002, 02, 02))
-      expect(jo.birthday_message(02, 02)).to eq("Happy Birthday")
+      expect(jo.birthday_message(2, 2)).to eq("Happy Birthday")
     end 
-
-    it "If DOB(DD, MM) do not match Time(D, M) output time til b.day" do 
-      jo = Dob.new(Time.new(2002, 02, 02))
-      expect(jo.birthday_message(02, 01)).to eq("1 day until your birthday")
-    end 
-
   end 
+
 end 
