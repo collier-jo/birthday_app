@@ -3,6 +3,8 @@ require 'sinatra/base'
 class Birthday < Sinatra::Base
   get '/' do
     "Homepage"
+    p params 
+    erb(:index)
   end
 
   # start the server if ruby file executed directly
