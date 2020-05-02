@@ -2,6 +2,9 @@ require 'sinatra/base'
 require_relative './lib/dob'
 
 class Birthday < Sinatra::Base
+  
+  enable :sessions
+  
   get '/' do
     "Homepage"
     p params 
@@ -9,10 +12,16 @@ class Birthday < Sinatra::Base
   end
 
   post '/output' do
-    p params 
-    @name = params[:name]
-    @dd = params[:dd]
-    @mm = params[:mm]
+    session[:name] = params[:name]
+    session[:dd] = params[:dd]
+    session[:mm] = params[:mm]
+    redirect '/birthday'
+  end 
+
+  get "/birthday" do 
+    @name = session[:name]
+    @dd= session[:dd]
+    @mm = session[:mm]
     @birthday = Dob.new.birthday_message(@dd, @mm)
     erb(:outcome)
   end 
