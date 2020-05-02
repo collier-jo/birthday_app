@@ -1,7 +1,14 @@
-<h1> <%= @name %> </h> 
 
-<h1> <%= @dd %></h1>
 
-<h1> <%= @mm %></h1>
+<% if @birthday == "Happy Birthday" %> 
 
-<h1> <%= @birthday %></h1>
+    <h1> <%= @birthday %> <%=@name%></h1>
+
+<% end %> 
+
+
+<% if @birthday.include?("day(s) until your birthday!") %> 
+    
+    <h1> <%=@name%>, <%= @birthday %> </h1>
+
+<% end %>
