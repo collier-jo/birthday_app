@@ -1,9 +1,11 @@
 ## Birthday App ## 
 
+[![Build Status](https://travis-ci.org/collier-jo/birthday_app.svg?branch=master)](https://travis-ci.org/collier-jo/birthday_app)
+
 https://github.com/makersacademy/course/blob/master/intro_to_the_web/post_challenges/birthday_app.md
 
 
-Brief:: 
+## Brief:: 
 
 Your challenge is to build a web app that will ask the user for a name and birthday.
 
